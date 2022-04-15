@@ -79,49 +79,49 @@ function App(){
     }
 
     return(
-      <div class="container">
+      <div className="container">
         <h1>Biodata</h1>
         <form id="form-input" onSubmit={handleSubmit}>
-            <div class="form-name margin-bottom">
-                <label for="name">Nama Lengkap</label><br>
-                <input type="text" id="namaLengkap" name="nama" onChange={inputNama}>
+            <div className="form-name margin-bottom">
+                <label for="name">Nama Lengkap</label><br></br>
+                <input type="text" id="namaLengkap" name="nama" onChange={inputNama}></input>
             </div>
-            <div class="form-birthday margin-bottom">
-                <label for="birthday">Tanggal Lahir</label><br>
-                <input type="date" id="birthday" name="tglLahir" onChange={inputTglLahir}>
+            <div className="form-birthday margin-bottom">
+                <label for="birthday">Tanggal Lahir</label><br></br>
+                <input type="date" id="tglLahir" name="tglLahir" onChange={inputTglLahir}></input>
             </div>
-            <div class="form-gender margin-bottom">
-                <label for="gender">Jenis Kelamin</label><br>
-                <div class="choice" id="jenisKelamin">
-                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Laki-laki" onChange={inputJenisKelamin}>
+            <div className="form-gender margin-bottom">
+                <label for="gender">Jenis Kelamin</label><br></br>
+                <div className="choice" id="jenisKelamin">
+                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Laki-laki" onChange={inputJenisKelamin}></input>
                     <label for="gender">Laki-laki</label>
-                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Perempuan" onChange={inputJenisKelamin}>
+                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Perempuan" onChange={inputJenisKelamin}></input>
                     <label for="gender">Perempuan</label>
-                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Other" onChange={inputJenisKelamin}>
+                    <input type="radio" name="jenisKelamin" id="jenisKelamin" value="Other" onChange={inputJenisKelamin}></input>
                     <label for="gender">Other</label>
                 </div>
             </div>
-            <div class="form-hobby margin-bottom">
-                <label for="hobby">Hobi</label><br>
-                <div class="choice" id="hobi">
-                    <input type="checkbox" name="hobi" id="hobi" value="Ngoding" onChange={inputHobi}>
+            <div className="form-hobby margin-bottom">
+                <label for="hobby">Hobi</label><br></br>
+                <div className="choice" id="hobi">
+                    <input type="checkbox" name="hobi" id="hobi" value="Ngoding" onChange={inputHobi}></input>
                     <label for="hobby">Ngoding</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Rebahan" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Rebahan" onChange={inputHobi}></input>
                     <label for="hobby">Rebahan</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Melamun" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Melamun" onChange={inputHobi}></input>
                     <label for="hobby">Melamun</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Baca Buku" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Baca Buku" onChange={inputHobi}></input>
                     <label for="hobby">Baca Buku</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Nonton Youtube" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Nonton Youtube" onChange={inputHobi}></input>
                     <label for="hobby">Nonton Youtube</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Dengerin Lagu" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Dengerin Lagu" onChange={inputHobi}></input>
                     <label for="hobby">Dengerin Lagu</label>
-                    <input type="checkbox" name="hobi" id="hobi" value="Other" onChange={inputHobi}>
+                    <input type="checkbox" name="hobi" id="hobi" value="Other" onChange={inputHobi}></input>
                     <label for="hobby">Other</label>
                 </div>
             </div>
-            <div class="form-religion margin-bottom">
-                <label for="religion">Agama</label><br>
+            <div className="form-religion margin-bottom">
+                <label for="religion">Agama</label><br></br>
                 <select id="agama" name="agama" onChange={inputAgama}>
                     <option value="Budha" selected>Budha</option>
                     <option value="Hindu">Hindu</option>
@@ -132,16 +132,16 @@ function App(){
                     <option value="Other">Other</option>
                 </select>
             </div>
-            <div class="form-message margin-bottom">
-                <label for="message">Pesan</label><br>
+            <div className="form-message margin-bottom">
+                <label for="message">Pesan</label><br></br>
                 <textarea id="pesan" name="pesan" onChange={inputPesan}></textarea>
             </div>
-            <button type="submit" onclick={resetField}>Submit</button>
+            <button className="btn btn-primary" type="submit" id="submit" onClick={resetField}> Submit </button>
         </form>
-        <table class="table">
+        <table class="table" id="table-hover">
           <thead>
             <tr>
-              <th scope="col" class="label-width">Label</th>
+              <th scope="col" className="label-width">Label</th>
               <th scope="col">Value</th>
             </tr>
           </thead>
@@ -200,4 +200,4 @@ function App(){
   );
 }
 
-export default Form;
+export default App;
